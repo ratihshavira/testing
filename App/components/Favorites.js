@@ -10,7 +10,8 @@ import {
 import { getNewsDetail, getNewsId } from '../services/apiConfig'
 import NewsList from './NewsList';
 import {Header} from 'react-native-elements'
-export default class Home extends Component {
+
+export default class Favorites extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -69,7 +70,7 @@ export default class Home extends Component {
     return (
       <View style={styles.container}>
         <Header
-          centerComponent={{ text: 'HACKER NEWS', style: { color: '#fff' } }}
+          centerComponent={{ text: 'FAVORITES', style: { color: '#fff' } }}
         />
         <StatusBar
           backgroundColor="blue"

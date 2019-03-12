@@ -3,6 +3,7 @@ import { createStackNavigator, createAppContainer, createTabNavigator, createBot
 import { TouchableOpacity } from 'react-native-gesture-handler'
 import { Icon } from 'react-native-elements'
 import Home from '../components/Home'
+import Favorites from '../components/Favorites'
 
 
 const AppNavigator = createBottomTabNavigator({
@@ -14,7 +15,7 @@ const AppNavigator = createBottomTabNavigator({
     },
   },
   'Explore': {
-    screen: Home,
+    screen: Favorites,
     navigationOptions: {
       tabBarLabel: 'Favorites',
       tabBarIcon: ({ tintColor }) => <Icon name="ios-heart" type="ionicon" size={28} color={tintColor} />
