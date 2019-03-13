@@ -10,6 +10,17 @@ import {
 import { Icon } from 'react-native-elements';
 
 export default class NewsList extends Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      iconColor: "grey"
+    }
+  }
+
+  changeColor = () => {
+    this.setState({ iconColor: "red" })
+  }
+
     render() {
         return(
           <View style={styles.rowContainer}>
@@ -28,9 +39,7 @@ export default class NewsList extends Component {
               </Text>
             </View>
             <View>
-              <TouchableOpacity>
-              <Icon name="ios-heart" type="ionicon" size={28} color={'#CCC'} />
-              </TouchableOpacity>
+              <Icon name="ios-heart" type="ionicon" size={28} color={this.state.iconColor} onPress={this.changeColor}/>
             </View>
           </View>
         );
